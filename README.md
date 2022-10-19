@@ -1,7 +1,7 @@
 # Klinik Kecantikan
-# Tugas Kelompok Mata Kuliah Pemrograman Web Lanjut
+## Tugas Kelompok Mata Kuliah Pemrograman Web Lanjut
 
-## Teknologi
+### Teknologi
 
 - Codeigniter 4
 - Bootstrap
