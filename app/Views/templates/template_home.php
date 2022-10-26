@@ -129,7 +129,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="h2-heading">Pigmentation</h2>
+                    <h2 class="h2-heading">Face Treatment</h2>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
