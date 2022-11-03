@@ -98,8 +98,8 @@
                         <div class="collapse" id="ui-basic">
                             <ul class="nav flex-column sub-menu">
                                 <li class="nav-item"> <a class="nav-link" href="/admin/halaman_daftar_order">Daftar Order</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="#">Order Complete</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="#">Order Cancel</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/admin/halaman_order_complete">Order Complete</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/admin/halaman_order_cancel">Order Cancel</a></li>
                             </ul>
                         </div>
                     </li>

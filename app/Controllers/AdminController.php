@@ -37,4 +37,16 @@ class AdminController extends BaseController
         // echo "Halaman Treatment";
         return view('admin/halaman_daftar_order_page');
     }
+
+    public function halaman_order_complete()
+    {
+        // echo "Halaman Treatment";
+        return view('admin/halaman_order_complete_page');
+    }
+
+    public function halaman_order_cancel()
+    {
+        // echo "Halaman Treatment";
+        return view('admin/halaman_order_cancel_page');
+    }
 }
