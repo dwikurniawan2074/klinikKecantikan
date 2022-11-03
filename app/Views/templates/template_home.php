@@ -19,7 +19,7 @@
     <meta property="og:type" content="article" />
 
     <!-- Website Title -->
-    <title>Tivo - SaaS App HTML Landing Page Template</title>
+    <title>Klinik Kecantikan</title>
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
@@ -30,7 +30,7 @@
     <link href="/Assets/tivo-1.0.0/css/styles.css" rel="stylesheet">
 
     <!-- Favicon  -->
-    <link rel="icon" href="images/favicon.png">
+    <link rel="icon" href="/Assets/Images/logo_klinik.png">
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">

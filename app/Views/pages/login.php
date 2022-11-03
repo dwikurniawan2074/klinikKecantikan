@@ -1,6 +1,4 @@
-<?= $this->extend('templates/template');?>
+<?= $this->extend('admin/halaman_admin_page');?>
 <?= $this->section('content');?>
-
-<h3>ini halaman about</h3>
 
 <?= $this->endSection('content');?>
