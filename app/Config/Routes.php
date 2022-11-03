@@ -43,7 +43,17 @@ $routes->delete('/delete/(:num)', 'MahasiswaController::delete/$1');
 $routes->post('/update/(:num)', 'MahasiswaController::update/$1');
 $routes->get('/edit/(:num)', 'MahasiswaController::edit/$1');
 $routes->get('/index', 'Pages::index');
-$routes->get('(:any)', 'Pages::view/$1');
+// $routes->get('(:any)', 'Pages::view/$1');
+
+//Routes Halaman Utama
+$routes->get('/home', 'Home::index');
+
+
+//Routes Admin
+$routes->get('/login', 'AdminController::login');
+$routes->get('/admin/halaman_admin', 'AdminController::halaman_admin');
+$routes->get('/admin/halaman_treatment', 'AdminController::halaman_treatment');
+$routes->get('/admin/halaman_daftar_order', 'AdminController::halaman_daftar_order');
 
 
 /*
