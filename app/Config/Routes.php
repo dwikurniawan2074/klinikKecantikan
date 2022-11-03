@@ -54,6 +54,8 @@ $routes->get('/login', 'AdminController::login');
 $routes->get('/admin/halaman_admin', 'AdminController::halaman_admin');
 $routes->get('/admin/halaman_treatment', 'AdminController::halaman_treatment');
 $routes->get('/admin/halaman_daftar_order', 'AdminController::halaman_daftar_order');
+$routes->get('/admin/halaman_order_complete', 'AdminController::halaman_order_complete');
+$routes->get('/admin/halaman_order_cancel', 'AdminController::halaman_order_cancel');
 
 
 /*
