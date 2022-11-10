@@ -47,16 +47,21 @@ $routes->get('/index', 'Pages::index');
 
 //Routes Halaman Utama
 $routes->get('/home', 'Home::index');
+$routes->get('/pages/login', 'Home::login');
+// $routes->get('/home/(:any)', 'Home::viewTreatment/$1');
 
 
 //Routes Admin
-$routes->get('/login', 'AdminController::login');
+$routes->get('/admin/dashboard', 'AdminController::dashboard');
 $routes->get('/admin/halaman_admin', 'AdminController::halaman_admin');
 $routes->get('/admin/halaman_treatment', 'AdminController::halaman_treatment');
 $routes->get('/admin/halaman_daftar_order', 'AdminController::halaman_daftar_order');
 $routes->get('/admin/halaman_order_complete', 'AdminController::halaman_order_complete');
 $routes->get('/admin/halaman_order_cancel', 'AdminController::halaman_order_cancel');
+$routes->get('/admin/halaman_kritik_saran', 'AdminController::halaman_kritik_saran');
 
+//Routes default untuk pages view
+$routes->get('(:any)', 'Pages::view/$1');
 
 /*
  * --------------------------------------------------------------------
