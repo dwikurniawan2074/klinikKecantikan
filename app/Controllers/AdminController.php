@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\TreatmentModel;
 
 class AdminController extends BaseController
 {
@@ -29,7 +30,9 @@ class AdminController extends BaseController
     public function halaman_treatment()
     {
         // echo "Halaman Treatment";
-        return view('admin/halaman_treatment_page');
+        $treatment = new TreatmentModel();
+        $data = $treatment->getTreatment();
+        return view('admin/halaman_treatment_page', compact('data'));
     }
 
     public function halaman_daftar_order()

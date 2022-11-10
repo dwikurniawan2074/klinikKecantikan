@@ -2,6 +2,18 @@
 
 <?= $this->section('content'); ?>
 
+<style>
+    .table td img {
+        width: 70px;
+        height: 40px;
+        border-radius: 10%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+</style>
+
 <div class="main-panel">
     <div class="content-wrapper">
         <div class="row">
@@ -72,91 +84,28 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>
-                                            1
-                                        </td>
-                                        <td>
-                                            
-                                        </td>
-                                        <td>
-                                            081289892965
-                                        </td>
-                                        <td>
-                                            $ 77.99
-                                        </td>
-                                        <td>
-                                            
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            2
-                                        </td>
-                                        <td>
-                                            Messsy Adam
-                                        </td>
-                                        <td>
-                                            089777856543
-                                        </td>
-                                        <td>
-                                            $245.30
-                                        </td>
-                                        <td>
-                                            
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            3
-                                        </td>
-                                        <td>
-                                            John Richards
-                                        </td>
-                                        <td>
-                                            089866547786
-                                        </td>
-                                        <td>
-                                            $138.00
-                                        </td>
-                                        <td>
-                                            
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            4
-                                        </td>
-                                        <td>
-                                            Peter Meggik
-                                        </td>
-                                        <td>
-                                            085899067764
-                                        </td>
-                                        <td>
-                                            $ 77.99
-                                        </td>
-                                        <td>
-                                            
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            5
-                                        </td>
-                                        <td>
-                                            Edward
-                                        </td>
-                                        <td>
-                                            089539976544
-                                        </td>
-                                        <td>
-                                            $ 160.25
-                                        </td>
-                                        <td>
-                                            
-                                        </td>
-                                    </tr>
+                                    <?php
+                                    foreach ($data as $treatment) {
+                                    ?>
+                                        <tr>
+                                            <td>
+                                                <?= $treatment['id']; ?>
+                                            </td>
+                                            <td>
+                                                <?= $treatment['nama_treatment']; ?>
+                                            </td>
+                                            <td>
+                                                <?= $treatment['deskripsi']; ?>
+                                            </td>
+                                            <td>
+                                                <?= $treatment['harga']; ?>
+                                            </td>
+                                            <td>
+                                                <img src="<?= $treatment['gambar_treatment']; ?>" alt="">
+                                            </td>
+                                        </tr>
+                                    <?php }
+                                    ?>
                                 </tbody>
                             </table>
                         </div>
