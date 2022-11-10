@@ -104,7 +104,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/admin/halaman_kritik_saran">
                             <i class="icon-book menu-icon"></i>
                             <span class="menu-title">Kritik dan Saran</span>
                         </a>

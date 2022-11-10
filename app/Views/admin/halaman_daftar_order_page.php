@@ -8,6 +8,7 @@
             <div class="col-sm-12 mb-4 mb-xl-0">
                 <h4 class="font-weight-bold text-dark">Halaman Daftar Order</h4>
             </div>
+            
             <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
@@ -45,18 +46,16 @@
                                             Herman Beck
                                         </td>
                                         <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
+                                            081289892965
                                         </td>
                                         <td>
                                             $ 77.99
                                         </td>
                                         <td>
-                                            $ 77.99
+                                            May 03, 2015
                                         </td>
                                         <td>
-                                            May 15, 2015
+                                            Rp. 320.000
                                         </td>
                                     </tr>
                                     <tr>
@@ -67,18 +66,16 @@
                                             Messsy Adam
                                         </td>
                                         <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
+                                            089777856543
                                         </td>
                                         <td>
                                             $245.30
                                         </td>
                                         <td>
-                                            $245.30
+                                            May 03, 2015
                                         </td>
                                         <td>
-                                            July 1, 2015
+                                            Rp. 320.000
                                         </td>
                                     </tr>
                                     <tr>
@@ -89,18 +86,16 @@
                                             John Richards
                                         </td>
                                         <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
+                                            089866547786
                                         </td>
                                         <td>
                                             $138.00
                                         </td>
                                         <td>
-                                            $138.00
+                                            May 03, 2015
                                         </td>
                                         <td>
-                                            Apr 12, 2015
+                                            Rp. 320.000
                                         </td>
                                     </tr>
                                     <tr>
@@ -111,18 +106,16 @@
                                             Peter Meggik
                                         </td>
                                         <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
+                                            085899067764
                                         </td>
                                         <td>
                                             $ 77.99
                                         </td>
                                         <td>
-                                            $ 77.99
+                                            May 03, 2015
                                         </td>
                                         <td>
-                                            May 15, 2015
+                                            Rp. 320.000
                                         </td>
                                     </tr>
                                     <tr>
@@ -133,12 +126,7 @@
                                             Edward
                                         </td>
                                         <td>
-                                            <div class="progress">
-                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            $ 160.25
+                                            089539976544
                                         </td>
                                         <td>
                                             $ 160.25
@@ -146,8 +134,11 @@
                                         <td>
                                             May 03, 2015
                                         </td>
+                                        <td>
+                                            Rp. 320.000
+                                        </td>
                                     </tr>
-                                    
+
                                 </tbody>
                             </table>
                         </div>

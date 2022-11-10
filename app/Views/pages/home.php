@@ -1,4 +1,4 @@
-<?= $this->extend('templates/template_home');?>
+<?= $this->extend('templates/template_landing_page');?>
 <?= $this->section('content');?>
 
 <h3>ini halaman home</h3>

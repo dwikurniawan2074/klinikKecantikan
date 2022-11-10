@@ -11,9 +11,9 @@ class AdminController extends BaseController
         return view('pages/home');
     }
 
-    public function login()
+    public function dashboard()
     {
-        return view('pages/login');
+        return view('admin/dashboard_page');
     }
 
     public function halaman_admin()
@@ -48,5 +48,11 @@ class AdminController extends BaseController
     {
         // echo "Halaman Treatment";
         return view('admin/halaman_order_cancel_page');
+    }
+
+    public function halaman_kritik_saran()
+    {
+        // echo "Halaman Treatment";
+        return view('admin/halaman_kritik_saran_page');
     }
 }
