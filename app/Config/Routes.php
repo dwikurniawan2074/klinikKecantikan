@@ -48,6 +48,7 @@ $routes->get('/index', 'Pages::index');
 //Routes Halaman Utama
 $routes->get('/home', 'Home::index');
 $routes->get('/pages/login', 'Home::login');
+$routes->get('/pages/register', 'Home::register');
 // $routes->get('/home/(:any)', 'Home::viewTreatment/$1');
 
 

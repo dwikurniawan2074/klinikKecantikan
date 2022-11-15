@@ -9,10 +9,11 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <title>EduWell - Education HTML5 Template</title>
+    <title>Zahra Clinic</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/Assets/eduwell-1.0.0/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="/Assets/Images/logo_web_klinik.png">
 
 
     <!-- Additional CSS Files -->
@@ -30,13 +31,6 @@
             margin-bottom: 60px;
         }
     </style>
-    <!--
-
-TemplateMo 573 EduWell
-
-https://templatemo.com/tm-573-eduwell
-
--->
 </head>
 
 <body>
@@ -163,7 +157,7 @@ https://templatemo.com/tm-573-eduwell
                                     <div class="icon">
                                         <i class="fa fa-phone"></i>
                                     </div>
-                                    <h4>Phone</h4>
+                                    <h4>Telpon</h4>
                                     <span>0812-3367-8888</span>
                                 </div>
                             </div>

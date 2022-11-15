@@ -19,6 +19,10 @@ class Home extends BaseController
         return view('pages/login');
     }
 
+    public function register(){
+        return view('pages/register');
+    }
+
     // public function viewTreatment($slug)
 	// {
 	// 	$treatment = new TreatmentModel();
