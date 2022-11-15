@@ -20,7 +20,7 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="/Assets/regal/css/style.css">
     <!-- endinject -->
-    <link rel="shortcut icon" href="/Assets/Images/logo_klinik.png" />
+    <link rel="shortcut icon" href="/Assets/Images/logo_web_klinik.png" />
 </head>
 
 <body>

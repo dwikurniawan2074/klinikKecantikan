@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Login</title>
+    <title>Register</title>
     <!-- base:css -->
     <link rel="stylesheet" href="/Assets/regal/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="/Assets/regal/vendors/feather/feather.css">
@@ -29,22 +29,44 @@
                             <div class="brand-logo">
                                 <img src="/Assets/Images/logo_klinik_dark.svg" alt="logo">
                             </div>
-                            <h4>Welcome back!</h4>
-                            <h6 class="font-weight-light">Admin</h6>
+                            <h4>New here?</h4>
+                            <h6 class="font-weight-light">Join us today! It takes only few steps</h6>
                             <form class="pt-3">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail">Username</label>
+                                    <label>Username</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend bg-transparent">
                                             <span class="input-group-text bg-transparent border-right-0">
                                                 <i class="mdi mdi-account-outline text-primary"></i>
                                             </span>
                                         </div>
-                                        <input type="text" class="form-control form-control-lg border-left-0" id="exampleInputEmail" placeholder="Username">
+                                        <input type="text" class="form-control form-control-lg border-left-0" placeholder="Username">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword">Password</label>
+                                    <label>Email</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
+                                            <span class="input-group-text bg-transparent border-right-0">
+                                                <i class="mdi mdi-email-outline text-primary"></i>
+                                            </span>
+                                        </div>
+                                        <input type="email" class="form-control form-control-lg border-left-0" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Country</label>
+                                    <select class="form-control form-control-lg" id="exampleFormControlSelect2">
+                                        <option>Country</option>
+                                        <option>United States of America</option>
+                                        <option>United Kingdom</option>
+                                        <option>India</option>
+                                        <option>Germany</option>
+                                        <option>Argentina</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend bg-transparent">
                                             <span class="input-group-text bg-transparent border-right-0">
@@ -54,12 +76,19 @@
                                         <input type="password" class="form-control form-control-lg border-left-0" id="exampleInputPassword" placeholder="Password">
                                     </div>
                                 </div>
-
-                                <div class="my-3">
-                                    <a class="btn btn-block btn-info btn-lg font-weight-medium auth-form-btn" href="/admin/dashboard">LOGIN</a>
+                                <div class="mb-4">
+                                    <div class="form-check">
+                                        <label class="form-check-label text-muted">
+                                            <input type="checkbox" class="form-check-input">
+                                            I agree to all Terms & Conditions
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <a class="btn btn-block btn-info btn-lg font-weight-medium auth-form-btn" href="/Assets/regal/index.html">SIGN UP</a>
                                 </div>
                                 <div class="text-center mt-4 font-weight-light">
-                                    Tidak Mempunyai Akun? <a href="/pages/register" class="text-primary">Buat Disini!</a>
+                                    Already have an account? <a href="login" class="text-primary">Login</a>
                                 </div>
                                 <div class="text-center mt-4 font-weight-light">
                                     <a href="/home" class="text-primary">Kembali Ke Halaman Utama</a>
@@ -67,8 +96,8 @@
                             </form>
                         </div>
                     </div>
-                    <div class="col-lg-6 d-flex flex-row" style="background-color: rgb(219,138,222) !important;">
-                        <!-- <p class="text-white font-weight-medium text-center flex-grow align-self-end">Copyright &copy; 2020 All rights reserved.</p> -->
+                    <div class="col-lg-6 register-half-bg d-flex flex-row">
+                        <p class="text-white font-weight-medium text-center flex-grow align-self-end">Copyright &copy; 2020 All rights reserved.</p>
                     </div>
                 </div>
             </div>
