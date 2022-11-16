@@ -38,7 +38,7 @@
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item dropdown d-flex mr-4 ">
                         <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-toggle="dropdown">
-                            <i class="icon-cog"></i>
+                            <i class="icon-grid"></i></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
                             <p class="mb-0 font-weight-normal float-left dropdown-header">Settings</p>
@@ -49,11 +49,6 @@
                                 <i class="icon-inbox"></i> Logout
                             </a>
                         </div>
-                    </li>
-                    <li class="nav-item dropdown mr-4 d-lg-flex d-none">
-                        <a class="nav-link count-indicatord-flex align-item s-center justify-content-center" href="#">
-                            <i class="icon-grid"></i>
-                        </a>
                     </li>
                 </ul>
                 <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
@@ -113,7 +108,7 @@
             </nav>
             <?= $this->renderSection('content'); ?>
             <!-- partial -->
-            
+
             <!-- main-panel ends -->
         </div>
         <!-- page-body-wrapper ends -->
