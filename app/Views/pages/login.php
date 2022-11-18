@@ -40,7 +40,7 @@
                                                 <i class="mdi mdi-account-outline text-primary"></i>
                                             </span>
                                         </div>
-                                        <input type="text" class="form-control form-control-lg border-left-0" id="exampleInputEmail" placeholder="Username">
+                                        <input type="text" class="form-control form-control-lg border-left-0" id="username" placeholder="Username">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -51,7 +51,7 @@
                                                 <i class="mdi mdi-lock-outline text-primary"></i>
                                             </span>
                                         </div>
-                                        <input type="password" class="form-control form-control-lg border-left-0" id="exampleInputPassword" placeholder="Password">
+                                        <input type="password" class="form-control form-control-lg border-left-0" id="password" placeholder="Password">
                                     </div>
                                 </div>
 
