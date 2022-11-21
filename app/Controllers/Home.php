@@ -18,6 +18,20 @@ class Home extends BaseController
 
     public function login()
     {
+        $AdminModel = new \App\Models\AdminModel();
+        $login = $this->request->getVar('login');
+        if($login){
+            $username = $this->request->getVar('username');
+            $password = $this->request->getVar('password');
+
+            if($username == '' or $password == ''){
+                $err = "Silahkan masukkan username dan password";
+            }
+            if($err){
+                session()->setFlashdata('error', $err);
+                return redirect()->to("pages/login");
+            }
+        }
         return view('pages/login');
     }
 

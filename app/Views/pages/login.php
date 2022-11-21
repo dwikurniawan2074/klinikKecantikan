@@ -31,7 +31,7 @@
                             </div>
                             <h4>Welcome back!</h4>
                             <h6 class="font-weight-light">Admin</h6>
-                            <form class="pt-3">
+                            <form class="pt-3" name="login">
                                 <div class="form-group">
                                     <label for="exampleInputEmail">Username</label>
                                     <div class="input-group">
@@ -40,7 +40,7 @@
                                                 <i class="mdi mdi-account-outline text-primary"></i>
                                             </span>
                                         </div>
-                                        <input type="text" class="form-control form-control-lg border-left-0" id="username" placeholder="Username">
+                                        <input type="text" class="form-control form-control-lg border-left-0" name="username" id="username" placeholder="Username">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -51,7 +51,7 @@
                                                 <i class="mdi mdi-lock-outline text-primary"></i>
                                             </span>
                                         </div>
-                                        <input type="password" class="form-control form-control-lg border-left-0" id="password" placeholder="Password">
+                                        <input type="password" class="form-control form-control-lg border-left-0" name="password" id="password" placeholder="Password">
                                     </div>
                                 </div>
 
