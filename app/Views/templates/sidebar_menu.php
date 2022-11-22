@@ -45,7 +45,7 @@
                             <a class="dropdown-item preview-item" href="/home">
                                 <i class="icon-layout"></i> Halaman Beranda
                             </a>
-                            <a class="dropdown-item preview-item" href="/home">
+                            <a class="dropdown-item preview-item" href="<?= base_url('logout'); ?>">
                                 <i class="icon-inbox"></i> Logout
                             </a>
                         </div>

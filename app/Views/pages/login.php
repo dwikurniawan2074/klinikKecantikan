@@ -31,36 +31,76 @@
                             </div>
                             <h4>Welcome back!</h4>
                             <h6 class="font-weight-light">Admin</h6>
-                            <form class="pt-3">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail">Username</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend bg-transparent">
-                                            <span class="input-group-text bg-transparent border-right-0">
-                                                <i class="mdi mdi-account-outline text-primary"></i>
-                                            </span>
+                            <?= view('Myth\Auth\Views\_message_block') ?>
+
+                            <form action="<?= url_to('login') ?>" class="pt-3" method="post">
+                                <?= csrf_field() ?>
+
+                                <?php if ($config->validFields === ['email']) : ?>
+                                    <div class="form-group">
+                                        <label for="login"><?= lang('Auth.email') ?></label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend bg-transparent">
+                                                <span class="input-group-text bg-transparent border-right-0">
+                                                    <i class="mdi mdi-account-outline text-primary"></i>
+                                                </span>
+                                            </div>
+                                            <input type="email" class="form-control form-control-lg border-left-0 <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" name="login" placeholder="<?= lang('Auth.email') ?>">
+                                            <div class="invalid-feedback">
+                                                <?= session('errors.login') ?>
+                                            </div>
                                         </div>
-                                        <input type="text" class="form-control form-control-lg border-left-0" id="exampleInputEmail" placeholder="Username">
                                     </div>
-                                </div>
+                                <?php else : ?>
+                                    <div class="form-group">
+                                        <label for="login"><?= lang('Auth.emailOrUsername') ?></label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend bg-transparent">
+                                                <span class="input-group-text bg-transparent border-right-0">
+                                                    <i class="mdi mdi-account-outline text-primary"></i>
+                                                </span>
+                                            </div>
+                                            <input type="text" class="form-control form-control-lg border-left-0 <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" name="login" placeholder="<?= lang('Auth.emailOrUsername') ?>">
+                                            <div class="invalid-feedback">
+                                                <?= session('errors.login') ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endif; ?>
+
                                 <div class="form-group">
-                                    <label for="exampleInputPassword">Password</label>
+                                    <label for="password"><?= lang('Auth.password') ?></label>
                                     <div class="input-group">
                                         <div class="input-group-prepend bg-transparent">
                                             <span class="input-group-text bg-transparent border-right-0">
                                                 <i class="mdi mdi-lock-outline text-primary"></i>
                                             </span>
                                         </div>
-                                        <input type="password" class="form-control form-control-lg border-left-0" id="exampleInputPassword" placeholder="Password">
+                                        <input type="password" class="form-control form-control-lg border-left-0 <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" name="password" placeholder="<?= lang('Auth.password') ?>">
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        <?= session('errors.password') ?>
                                     </div>
                                 </div>
 
+                                <?php if ($config->allowRemembering) : ?>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" name="remember" class="form-check-input" <?php if (old('remember')) : ?> checked <?php endif ?>>
+                                            <?= lang('Auth.rememberMe') ?>
+                                        </label>
+                                    </div>
+                                <?php endif; ?>
+
+
                                 <div class="my-3">
-                                    <a class="btn btn-block btn-info btn-lg font-weight-medium auth-form-btn" href="/admin/dashboard">LOGIN</a>
+                                    <button type="submit" class="btn btn-block btn-info btn-lg font-weight-medium auth-form-btn" ><?= lang('Auth.loginAction') ?></a>
                                 </div>
-                                <div class="text-center mt-4 font-weight-light">
-                                    Tidak Mempunyai Akun? <a href="/pages/register" class="text-primary">Buat Disini!</a>
-                                </div>
+                                <?php if ($config->allowRegistration) : ?>
+                                    <div class="text-center mt-4 font-weight-light">
+                                        Tidak Mempunyai Akun? <a href="<?= url_to('register') ?>" class="text-primary">Buat Disini!</a>
+                                    </div>
+                                <?php endif; ?>
                                 <div class="text-center mt-4 font-weight-light">
                                     <a href="/home" class="text-primary">Kembali Ke Halaman Utama</a>
                                 </div>

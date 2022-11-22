@@ -4,9 +4,11 @@ namespace App\Controllers;
 
 use App\Models\Mahasiswa;
 use App\Models\TreatmentModel;
+use App\Models\OrderanModel;
 
 class Home extends BaseController
 {
+
     public function index()
     {
         $treatment = new TreatmentModel();
@@ -16,12 +18,33 @@ class Home extends BaseController
 
     public function login()
     {
-        return view('pages/login');
+        return view('pages/login', ['config' => config('Auth')]);
     }
 
     public function register(){
         return view('pages/register');
     }
+
+
+    public function book(){
+        // $orderanmodel = new OrderanModel();
+        // $order = $orderanmodel->findAll();
+        $slug = url_title($this->request->getVar('nama'), '-', true);
+
+        $this->OrderanModel->save([
+            'nama' => $this->request->getVar('nama'),
+            'slug' => $slug,
+            'nomor_handphone' => $this->request->getVar('nomor_handphone'),
+            'id_jenis_treatment' => $this->request->getVar('id'),
+            'tanggal' => $this->request->getVar('tanggal'),
+            'total_harga' => $this->request->getVar('total_harga')
+        ]);
+
+        // dd($this->request->getVar('nama'));
+        return redirect()->to('/home');
+    }
+
+    
 
     // public function viewTreatment($slug)
 	// {

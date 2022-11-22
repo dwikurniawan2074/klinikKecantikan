@@ -23,16 +23,6 @@
                     <ul class="nav">
                         <li><a href="/home" class="active">Home</a></li>
                         <li><a href="#treatment">Treatment</a></li>
-                        <!-- Template untuk dropdown JANGAN DIHAPUS -->
-                        <li class="has-sub">
-                            <a href="javascript:void(0)">Pages</a>
-                            <ul class="sub-menu">
-                                <li><a href="about-us.html">About Us</a></li>
-                                <li><a href="our-services.html">Our Services</a></li>
-                                <li><a href="contact-us.html">Contact Us</a></li>
-                            </ul>
-                        </li>
-                        <li class="scroll-to-section"><a href="#testimonials">Tentang Kami</a></li>
                         <li><a href="#contact-section">Bantuan</a></li>
                         <li><a href="/pages/login">Login</a></li>
                     </ul>
@@ -88,12 +78,13 @@
                 <div class="col-md">
                     <div class="modal-body p-0">
                         <h3 class="mb-4">Booking Treatmentmu!</h3>
-                        <form action="#" class="signup-form">
+                        <form action="/home/book" method="post" class="signup-form">
+                            <?= csrf_field(); ?>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Nama Lengkap">
+                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lengkap">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Nomor Handphone">
+                                <input type="number" class="form-control" id="nomor_handphone" name="nomor_handphone" placeholder="Nomor Handphone">
                             </div>
                             <div class="form-group">
                                 <!-- <input type="text" class="form-control" placeholder="Jenis Treatment (Dropdown)"> -->
@@ -102,7 +93,7 @@
                                     <?php
                                     foreach ($data as $treatment) {
                                     ?>
-                                        <option><?= $treatment['nama_treatment']; ?></option>
+                                        <option value="$treatment['id']"><?= $treatment['nama_treatment']; ?></option>
 
                                     <?php
                                     }
@@ -110,10 +101,11 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <input type="date" class="form-control" placeholder="Tanggal">
+                                <input type="date" class="form-control" id="tanggal" name="tanggal" placeholder="Tanggal">
                             </div>
+                            
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Total Harga">
+                                <input type="text" class="form-control" id="total_harga" name="total_harga" placeholder="Total Harga">
                             </div>
                             <div class="form-group">
                                 <a href="/">

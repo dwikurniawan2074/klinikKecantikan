@@ -29,9 +29,10 @@
                             <div class="brand-logo">
                                 <img src="/Assets/Images/logo_klinik_dark.svg" alt="logo">
                             </div>
-                            <h4>New here?</h4>
-                            <h6 class="font-weight-light">Join us today! It takes only few steps</h6>
-                            <form class="pt-3">
+                            <h4><?= lang('Auth.register') ?></h4>
+                            <?= view('Myth\Auth\Views\_message_block') ?>
+                            <form action="<?= url_to('register') ?>" method="post" class="pt-3">
+                                <?= csrf_field() ?>
                                 <div class="form-group">
                                     <label>Username</label>
                                     <div class="input-group">
@@ -40,7 +41,7 @@
                                                 <i class="mdi mdi-account-outline text-primary"></i>
                                             </span>
                                         </div>
-                                        <input type="text" class="form-control form-control-lg border-left-0" placeholder="Username">
+                                        <input type="text" name="username" class="form-control form-control-lg border-left-0 <?php if (session('errors.username')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.username')?>" value="<?= old('username') ?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -51,19 +52,8 @@
                                                 <i class="mdi mdi-email-outline text-primary"></i>
                                             </span>
                                         </div>
-                                        <input type="email" class="form-control form-control-lg border-left-0" placeholder="Email">
+                                        <input type="email" name="email" class="form-control form-control-lg border-left-0 <?php if (session('errors.email')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.email')?>" value="<?= old('email') ?>">
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label>Country</label>
-                                    <select class="form-control form-control-lg" id="exampleFormControlSelect2">
-                                        <option>Country</option>
-                                        <option>United States of America</option>
-                                        <option>United Kingdom</option>
-                                        <option>India</option>
-                                        <option>Germany</option>
-                                        <option>Argentina</option>
-                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Password</label>
@@ -73,22 +63,25 @@
                                                 <i class="mdi mdi-lock-outline text-primary"></i>
                                             </span>
                                         </div>
-                                        <input type="password" class="form-control form-control-lg border-left-0" id="exampleInputPassword" placeholder="Password">
+                                        <input type="password" name="password" class="form-control form-control-lg border-left-0 <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.password')?>" autocomplete="off">
                                     </div>
                                 </div>
-                                <div class="mb-4">
-                                    <div class="form-check">
-                                        <label class="form-check-label text-muted">
-                                            <input type="checkbox" class="form-check-input">
-                                            I agree to all Terms & Conditions
-                                        </label>
+                                <div class="form-group">
+                                    <label>Repeat Password</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend bg-transparent">
+                                            <span class="input-group-text bg-transparent border-right-0">
+                                                <i class="mdi mdi-lock-outline text-primary"></i>
+                                            </span>
+                                        </div>
+                                        <input type="password" name="pass_confirm" class="form-control form-control-lg border-left-0 <?php if (session('errors.pass_confirm')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.repeatPassword')?>" autocomplete="off">
                                     </div>
                                 </div>
                                 <div class="mt-3">
-                                    <a class="btn btn-block btn-info btn-lg font-weight-medium auth-form-btn" href="/Assets/regal/index.html">SIGN UP</a>
+                                    <button type="submit" class="btn btn-block btn-info btn-lg font-weight-medium auth-form-btn" ><?=lang('Auth.register')?></button>
                                 </div>
                                 <div class="text-center mt-4 font-weight-light">
-                                    Already have an account? <a href="login" class="text-primary">Login</a>
+                                    <p> <?=lang('Auth.alreadyRegistered')?> <a href="<?= url_to('login') ?>" class="text-primary"><?=lang('Auth.signIn')?></a></p>
                                 </div>
                                 <div class="text-center mt-4 font-weight-light">
                                     <a href="/home" class="text-primary">Kembali Ke Halaman Utama</a>
