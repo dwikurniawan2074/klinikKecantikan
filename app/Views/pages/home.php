@@ -24,7 +24,7 @@
                         <li><a href="/home" class="active">Home</a></li>
                         <li><a href="#treatment">Treatment</a></li>
                         <li><a href="#contact-section">Bantuan</a></li>
-                        <li><a href="/pages/login">Login</a></li>
+                        <li><a href="<?= base_url('login'); ?>">Login</a></li>
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>

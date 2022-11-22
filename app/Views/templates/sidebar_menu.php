@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/Assets/regal/vendors/base/vendor.bundle.base.css">
     <!-- endinject -->
     <!-- plugin css for this page -->
+    <link rel="stylesheet" href="/Assets/regal/vendors/select2/select2.min.css">
+    <link rel="stylesheet" href="/Assets/regal/vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
     <link rel="stylesheet" href="/Assets/regal/vendors/flag-icon-css/css/flag-icon.min.css" />
     <link rel="stylesheet" href="/Assets/regal/vendors/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/Assets/regal/vendors/jquery-bar-rating/fontawesome-stars-o.css">
@@ -45,7 +47,7 @@
                             <a class="dropdown-item preview-item" href="/home">
                                 <i class="icon-layout"></i> Halaman Beranda
                             </a>
-                            <a class="dropdown-item preview-item" href="<?= base_url('logout'); ?>">
+                            <a class="dropdown-item preview-item" href="<?= url_to('logout'); ?>">
                                 <i class="icon-inbox"></i> Logout
                             </a>
                         </div>
@@ -130,7 +132,11 @@
     <script src="/Assets/regal/vendors/jquery-bar-rating/jquery.barrating.min.js"></script>
     <!-- End plugin js for this page -->
     <!-- Custom js for this page-->
+    <script src="/Assets/regal/vendors/typeahead.js/typeahead.bundle.min.js"></script>
+    <script src="/Assets/regal/vendors/select2/select2.min.js"></script>
     <script src="/Assets/regal/js/dashboard.js"></script>
+    <script src="/Assets/regal/js/typeahead.js"></script>
+    <script src="/Assets/regal/js/select2.js"></script>
     <!-- End custom js for this page-->
 </body>
 

@@ -5,9 +5,20 @@ namespace App\Controllers;
 use App\Models\Mahasiswa;
 use App\Models\TreatmentModel;
 use App\Models\OrderanModel;
+use Myth\Auth\Config\Auth as AuthConfig;
+use Myth\Auth\Entities\User;
+use Myth\Auth\Models\UserModel;
 
 class Home extends BaseController
 {
+    public function __construct()
+    {
+        // Most services in this controller require
+        // the session to be started - so fire it up!
+        $this->session = service('session');
+        $this->auth   = service('authentication');
+    }
+
 
     public function index()
     {
@@ -18,7 +29,20 @@ class Home extends BaseController
 
     public function login()
     {
-        return view('pages/login', ['config' => config('Auth')]);
+        $data = [
+            'title'  => 'Register',
+            'config' => config('Auth'),
+        ];
+        return view('pages/login', $data);
+    }
+    
+    public function logout()
+    {
+        if ($this->auth->check()) {
+            $this->auth->logout();
+        }
+
+        return redirect()->to(site_url('/'));
     }
 
     public function register(){
