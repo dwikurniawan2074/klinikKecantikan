@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\DaftarOrder;
 use App\Models\Mahasiswa;
 use App\Models\TreatmentModel;
 use App\Models\OrderanModel;
@@ -17,14 +18,28 @@ class Home extends BaseController
         // the session to be started - so fire it up!
         $this->session = service('session');
         $this->auth   = service('authentication');
+        $this->treatmentModel = new TreatmentModel();
+        $this->daftarOrder = new DaftarOrder();
     }
 
-
+    public function store(){
+        $treatment = $this->treatmentModel->where('id', $this->request->getVar('jenis_treatment'))->first();
+        $data = [
+            'nama' => $this->request->getVar('nama'),
+            'nomor_handphone' => $this->request->getVar('nomor_handphone'),
+            'id_jenis_treatment' => $this->request->getVar('jenis_treatment'),
+            'tanggal' => $this->request->getVar('tanggal'),
+            'total_harga' => $treatment['harga'],
+        ];
+        $this->daftarOrder->insert($data);
+        return redirect()->to('/home');
+    }
     public function index()
     {
-        $treatment = new TreatmentModel();
-        $data = $treatment->getTreatment();
-        return view('pages/home', compact('data'));
+        $data = [
+            'data' => $this->treatmentModel->findall()
+        ];
+        return view('pages/home', $data);
     }
 
     public function login()

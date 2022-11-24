@@ -5,10 +5,11 @@
 <div class="main-panel">
     <div class="content-wrapper">
         <div class="row">
+            
             <div class="col-sm-12 mb-4 mb-xl-0">
                 <h4 class="font-weight-bold text-dark">Halaman Daftar Order</h4>
             </div>
-            
+
             <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
@@ -35,110 +36,30 @@
                                         <th>
                                             Total Harga
                                         </th>
+                                        <th>
+                                            aksi
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>
-                                            1
-                                        </td>
-                                        <td>
-                                            Herman Beck
-                                        </td>
-                                        <td>
-                                            081289892965
-                                        </td>
-                                        <td>
-                                            $ 77.99
-                                        </td>
-                                        <td>
-                                            May 03, 2015
-                                        </td>
-                                        <td>
-                                            Rp. 320.000
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            2
-                                        </td>
-                                        <td>
-                                            Messsy Adam
-                                        </td>
-                                        <td>
-                                            089777856543
-                                        </td>
-                                        <td>
-                                            $245.30
-                                        </td>
-                                        <td>
-                                            May 03, 2015
-                                        </td>
-                                        <td>
-                                            Rp. 320.000
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            3
-                                        </td>
-                                        <td>
-                                            John Richards
-                                        </td>
-                                        <td>
-                                            089866547786
-                                        </td>
-                                        <td>
-                                            $138.00
-                                        </td>
-                                        <td>
-                                            May 03, 2015
-                                        </td>
-                                        <td>
-                                            Rp. 320.000
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            4
-                                        </td>
-                                        <td>
-                                            Peter Meggik
-                                        </td>
-                                        <td>
-                                            085899067764
-                                        </td>
-                                        <td>
-                                            $ 77.99
-                                        </td>
-                                        <td>
-                                            May 03, 2015
-                                        </td>
-                                        <td>
-                                            Rp. 320.000
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            5
-                                        </td>
-                                        <td>
-                                            Edward
-                                        </td>
-                                        <td>
-                                            089539976544
-                                        </td>
-                                        <td>
-                                            $ 160.25
-                                        </td>
-                                        <td>
-                                            May 03, 2015
-                                        </td>
-                                        <td>
-                                            Rp. 320.000
-                                        </td>
-                                    </tr>
+                                    <?php $i = 1;
+                                    foreach ($daftar as $item) : ?>
+                                        <tr>
+                                            <td><?= $i ?></td>
+                                            <td><?= $item['nama']; ?></td>
+                                            <td><?= $item['nomor_handphone'] ?></td>
+                                            <td><?= $item['id_jenis_treatment']; ?></td>
+                                            <td><?= $item['tanggal'] ?></td>
+                                            <td><?= $item['total_harga'] ?></td>
 
+                                            <td><a href="/admin/halaman_order_complete/store/<?= $item['id'] ?>" class="btn btn-primary">Complete</a></td>
+                                            <td><a href="/admin/halaman_order_complete/cancel/<?= $item['id'] ?>" class="btn btn-secondary">Cancel</a></td>
+                                            <td><a href="/admin/halaman_order_complete/delete/<?= $item['id'] ?>" class="btn btn-danger">Hapus</a></td>
+
+
+                                        </tr>
+                                    <?php $i++;
+                                    endforeach; ?>
                                 </tbody>
                             </table>
                         </div>

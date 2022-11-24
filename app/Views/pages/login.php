@@ -96,6 +96,7 @@
                                 <div class="my-3">
                                     <button type="submit" class="btn btn-block btn-info btn-lg font-weight-medium auth-form-btn" ><?= lang('Auth.loginAction') ?></a>
                                 </div>
+                                
                                 <?php if ($config->allowRegistration) : ?>
                                     <div class="text-center mt-4 font-weight-light">
                                         Tidak Mempunyai Akun? <a href="<?= url_to('register') ?>" class="text-primary">Buat Disini!</a>

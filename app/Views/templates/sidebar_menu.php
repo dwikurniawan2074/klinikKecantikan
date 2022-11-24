@@ -67,7 +67,7 @@
                         <img src="/Assets/Images/foto_admin.jpg">
                     </div>
                     <div class="user-name">
-                        Azzahra Nabila
+                        <?= user()->username; ?>
                     </div>
                     <div class="user-designation">
                         Admin
