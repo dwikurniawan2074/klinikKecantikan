@@ -36,6 +36,7 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->post('/home/booking/store', 'Home::store');
 $routes->get('/mahasiswa', 'MahasiswaController::index');
 $routes->get('/create', 'MahasiswaController::create');
 $routes->post('/store', 'MahasiswaController::store');
@@ -45,6 +46,11 @@ $routes->get('/edit/(:num)', 'MahasiswaController::edit/$1');
 $routes->get('/index', 'Pages::index');
 // $routes->get('(:any)', 'Pages::view/$1');
 
+
+
+$routes->get('/admin/halaman_order_complete/store/(:num)', 'TreatmentController::storeComplete/$1');
+$routes->get('/admin/halaman_order_complete/cancel/(:num)', 'TreatmentController::cancelComplete/$1');
+$routes->get('/admin/halaman_order_complete/delete/(:num)', 'TreatmentController::deleteOrder/$1');
 //Routes Halaman Utama
 $routes->get('/home', 'Home::index');
 $routes->post('/home/book', 'Home::book');
@@ -59,10 +65,17 @@ $routes->get('/pages/register', 'Home::register');
 $routes->get('/admin/dashboard', 'AdminController::dashboard');
 $routes->get('/admin/halaman_admin', 'AdminController::halaman_admin');
 $routes->get('/admin/halaman_treatment', 'AdminController::halaman_treatment');
+$routes->post('/admin/halaman_treatment', 'AdminController::halaman_treatment');
 $routes->get('/admin/halaman_daftar_order', 'AdminController::halaman_daftar_order');
 $routes->get('/admin/halaman_order_complete', 'AdminController::halaman_order_complete');
 $routes->get('/admin/halaman_order_cancel', 'AdminController::halaman_order_cancel');
 $routes->get('/admin/halaman_kritik_saran', 'AdminController::halaman_kritik_saran');
+
+$routes->post('/admin/treatment/store', 'TreatmentController::store');
+$routes->get('/admin/treatment/hapus/(:num)', 'TreatmentController::delete/$1');
+$routes->post('/admin/treatment/update', 'TreatmentController::update');
+$routes->post('/kritiksaran/store', 'KritikSaranController::store');
+$routes->get('/admin/delete/kritik_saran/(:num)', 'KritikSaranController::delete/$1');
 
 //Routes default untuk pages view
 $routes->get('(:any)', 'Pages::view/$1');

@@ -22,68 +22,21 @@
                                             Nama User
                                         </th>
                                         <th>
-                                            Tanggal Upload
+                                            Kritik dan Saran
                                         </th>
                                         <th>
-                                            Kritik dan Saran
+                                            Aksi
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php foreach ($kritik_saran as $item): ?>
                                     <tr>
-                                        <td class="py-1">
-                                            Henry Tom
-                                        </td>
-                                        <td>
-                                            11-02-2022
-                                        </td>
-                                        <td>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea debitis incidunt porro magnam saepe beatae facere, repellat minus! Ipsam voluptate dolorum, tenetur adipisci repudiandae consectetur sunt quam natus quis quaerat!
-                                        </td>
+                                        <td><?= $item['nama_lengkap'] ?></td>
+                                        <td><?= $item['deskripsi'] ?></td>
+                                        <td><a href="/admin/delete/kritik_saran/<?= $item['id'] ?>" class="btn btn-danger">Hapus</a></td>
                                     </tr>
-                                    <tr>
-                                        <td class="py-1">
-                                            Henry Tom
-                                        </td>
-                                        <td>
-                                            11-02-2022
-                                        </td>
-                                        <td>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aliquid quo ab id dignissimos accusantium nobis asperiores voluptates! Reprehenderit iure impedit tempore voluptatum maxime facilis, nemo minima ipsum doloribus atque!
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1">
-                                            Henry Tom
-                                        </td>
-                                        <td>
-                                            11-02-2022
-                                        </td>
-                                        <td>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt molestias magnam ullam omnis sint labore ea, alias atque eligendi officia, tempore quidem repellendus suscipit exercitationem, nihil dolorem incidunt accusamus nobis.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1">
-                                            Henry Tom
-                                        </td>
-                                        <td>
-                                        11-02-2022
-                                        </td>
-                                        <td>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto aliquid magni iure ipsam perferendis non quos. Quos placeat id ipsa! Non libero unde ad dolorum quo aspernatur expedita dolore repellendus.
-                                        </td>
-                                    <tr>
-                                        <td class="py-1">
-                                            Henry Tom
-                                        </td>
-                                        <td>
-                                            11-02-2022
-                                        </td>
-                                        <td>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nisi eaque sequi provident aspernatur odio, quidem, dolorum necessitatibus excepturi vero ab inventore rem labore repellendus illo saepe. Accusantium, aliquam earum.
-                                        </td>
-                                    </tr>
+                                    <?php endforeach;?>
                                 </tbody>
                             </table>
                         </div>

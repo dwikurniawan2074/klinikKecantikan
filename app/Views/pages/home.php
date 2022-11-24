@@ -2,7 +2,7 @@
 <?= $this->section('content'); ?>
 
 <style>
-    option{
+    option {
         background-color: palevioletred;
     }
 </style>
@@ -24,7 +24,11 @@
                         <li><a href="/home" class="active">Home</a></li>
                         <li><a href="#treatment">Treatment</a></li>
                         <li><a href="#contact-section">Bantuan</a></li>
-                        <li><a href="<?= base_url('login'); ?>">Login</a></li>
+                        <?php if (in_groups('admin')) : ?>
+                            <li><a href="/admin/dashboard">Dashboard</a></li>
+                        <?php else : ?>
+                            <li><a href="<?= base_url('login'); ?>">Login</a></li>
+                        <?php endif; ?>
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -78,7 +82,7 @@
                 <div class="col-md">
                     <div class="modal-body p-0">
                         <h3 class="mb-4">Booking Treatmentmu!</h3>
-                        <form action="/home/book" method="post" class="signup-form">
+                        <form action="/home/booking/store" method="post" class="signup-form">
                             <?= csrf_field(); ?>
                             <div class="form-group">
                                 <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lengkap">
@@ -89,24 +93,18 @@
                             <div class="form-group">
                                 <!-- <input type="text" class="form-control" placeholder="Jenis Treatment (Dropdown)"> -->
                                 <label for="exampleFormControlSelect1">Jenis Treatment</label>
-                                <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <select class="form-control form-control-lg" id="exampleFormControlSelect1" name="jenis_treatment">
                                     <?php
-                                    foreach ($data as $treatment) {
-                                    ?>
-                                        <option value="$treatment['id']"><?= $treatment['nama_treatment']; ?></option>
+                                    foreach ($data as $treatment) { ?>
+                                        <option value="<?= $treatment['id'] ?>"><?= $treatment['nama_treatment'] . " - " . $treatment['harga']; ?></option>
 
-                                    <?php
-                                    }
-                                    ?>
+                                    <?php } ?>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <input type="date" class="form-control" id="tanggal" name="tanggal" placeholder="Tanggal">
                             </div>
-                            
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="total_harga" name="total_harga" placeholder="Total Harga">
-                            </div>
+
                             <div class="form-group">
                                 <a href="/">
                                     <button type="submit" class="form-control btn btn-primary rounded submit px-3">Book</button>
@@ -141,7 +139,7 @@
                         <div class="item">
                             <div class="service-item">
                                 <div class="icon">
-                                    <img src="<?= $treatment['gambar_treatment']; ?>" alt="">
+                                    <img src="/gambar_treatment/<?= $treatment['gambar_treatment']; ?>" alt="">
                                 </div>
                                 <h4><?= $treatment['nama_treatment']; ?></h4>
                                 <p><?= $treatment['deskripsi']; ?></p>
@@ -197,7 +195,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <form id="contact" action="" method="post">
+                <form id="contact" action="/kritiksaran/store" method="post">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="section-heading">
@@ -206,12 +204,12 @@
                         </div>
                         <div class="col-lg-12">
                             <fieldset>
-                                <input type="name" name="name" id="name" placeholder="Nama Lengkap" autocomplete="on" required>
+                                <input type="name" name="nama_lengkap" id="name" placeholder="Nama Lengkap" autocomplete="on" required>
                             </fieldset>
                         </div>
                         <div class="col-lg-12">
                             <fieldset>
-                                <textarea name="message" id="message" placeholder="Deskripsi"></textarea>
+                                <textarea name="deskripsi" id="message" placeholder="Deskripsi"></textarea>
                             </fieldset>
                         </div>
                         <div class="col-lg-12">
