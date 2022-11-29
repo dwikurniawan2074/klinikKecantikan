@@ -139,7 +139,7 @@
                         <div class="item">
                             <div class="service-item">
                                 <div class="icon">
-                                    <img src="/gambar_treatment/<?= $treatment['gambar_treatment']; ?>" alt="">
+                                    <img src="<?= $treatment['gambar_treatment']; ?>" alt="">
                                 </div>
                                 <h4><?= $treatment['nama_treatment']; ?></h4>
                                 <p><?= $treatment['deskripsi']; ?></p>
