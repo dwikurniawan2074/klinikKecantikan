@@ -43,7 +43,7 @@
                                     <label>Gambar Treatment</label>
                                     <input type="file" name="img[]" class="file-upload-default">
                                     <div class="input-group col-xs-12">
-                                        <input name="gambar_t   reatment" type="file" class="form-control file-upload-info" placeholder="Upload Image">
+                                        <input name="gambar_treatment" type="file" class="form-control file-upload-info" placeholder="Upload Image">
                                         <!-- <sphp -->
                                     </div>
                                 </div>
@@ -104,7 +104,7 @@
                                                     <?= $treatment['harga']; ?>
                                                 </td>
                                                 <td>
-                                                    <img src="<?= $treatment['gambar_treatment']; ?>" alt="">
+                                                    <img src="/Assets/Images/<?= $treatment['gambar_treatment']; ?>" alt="">
                                                 </td>
                                                 <td>
                                                     <form action="/admin/halaman_treatment/" method="post">
@@ -216,7 +216,7 @@
                                             <?= $treatment['harga']; ?>
                                         </td>
                                         <td>
-                                            <img src="/gambar_treatment/<?= $treatment['gambar_treatment']; ?>" alt="">
+                                            <img src="/Assets/Images/<?= $treatment['gambar_treatment']; ?>" alt="">
                                         </td>
                                         <td>
                                             <form action="/admin/halaman_treatment/" method="post">
