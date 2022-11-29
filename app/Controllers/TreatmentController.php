@@ -24,7 +24,7 @@ class TreatmentController extends BaseController
             'harga' => $this->request->getVar('harga'),
             'gambar_treatment' => $foto->getName()
         ];
-        $foto->move('../public/gambar_treatment', $foto->getName());
+        $foto->move('../public/Assets/Images', $foto->getName());
         $this->modelTreatment->insert($data);
         return redirect()->to('/admin/halaman_treatment');
     }
