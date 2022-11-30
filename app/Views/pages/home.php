@@ -5,6 +5,11 @@
     option {
         background-color: palevioletred;
     }
+
+    .gambar_treatment {
+        width: fit-content;
+        height: 120px;
+    }
 </style>
 
 
@@ -139,7 +144,7 @@
                         <div class="item">
                             <div class="service-item">
                                 <div class="icon">
-                                    <img src="<?= $treatment['gambar_treatment']; ?>" alt="">
+                                    <img src="/Assets/Images/<?= $treatment['gambar_treatment']; ?>" class="gambar_treatment" alt="">
                                 </div>
                                 <h4><?= $treatment['nama_treatment']; ?></h4>
                                 <p><?= $treatment['deskripsi']; ?></p>

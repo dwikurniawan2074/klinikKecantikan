@@ -40,7 +40,7 @@ class AdminController extends BaseController
         ];
         if($this->request->getVar('id')){
             $id = $this->request->getVar('id');
-            $data['form'] = $treatment->getTreatment($id);
+            $data['form'] = $treatment->where(['id'=>$id])->findAll();
             return view('admin/halaman_treatment_page', $data);
         }else{
             return view('admin/halaman_treatment_page', $data);
